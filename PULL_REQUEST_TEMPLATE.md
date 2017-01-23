@@ -1,37 +1,37 @@
 **Pull Requests**
 
-When you submit a pull request to the project repository, it should provide all of the following information.
+##When you submit a pull request to the project repository, it should provide all of the following information.
 
-*Descriptions:*
-#Please describe what issue this PR solves
-
-
-#Please provide clarity to any potentially complex code.
+##Descriptions:
+*Please describe what issue this PR solves*
 
 
-#Explain reasons behind organizational or architectual decisions you made.
+*Please provide clarity to any potentially complex code.*
 
 
-#Give context to what feature you were completing so that your teammate has a mental model before looking at the code.
+*Explain reasons behind organizational or architectual decisions you made.*
 
 
-*Steps to Test:*
-
-#What steps are necessary to test the code.
+*Give context to what feature you were completing so that your teammate has a mental model before looking at the code.*
 
 
-#System configuration.
+##Steps to Test:
+
+*What steps are necessary to test the code.*
 
 
-#Are there 3rd party libraries that need to be installed?
+*System configuration.*
 
 
-#Any command line utilities to run?
+*Are there 3rd party libraries that need to be installed?*
 
 
-#If there is a UI component, give clear instructions for steps to perform in the UI, and what they should expect to see as the outcome of those steps.
+*Any command line utilities to run?*
+
+
+*If there is a UI component, give clear instructions for steps to perform in the UI, and what they should expect to see as the outcome of those steps.*
 
 
 
-*Link to Feature Ticket:*
-#Please provide a hyperlink to the ticket that contains a description of the feature you are working on.
+##Link to Feature Ticket:
+*Please provide a hyperlink to the ticket that contains a description of the feature you are working on.*
