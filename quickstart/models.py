@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-class Customer(models.Model):
+class User(models.Model):
 	first_name = models.CharField(max_length=55)
 	last_name = models.CharField(max_length=55)
 	street_address = models.CharField(max_length=55)
@@ -18,7 +18,7 @@ class Product(models.Model):
 	description = models.CharField(max_length=240)
 	price = models.DecimalField(max_digits=6, decimal_places=2)
 	product_type = models.ForeignKey(ProductType, on_delete=models.CASCADE)
-	customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
+	user = models.ForeignKey(User, on_delete=models.CASCADE)
 
 class PaymentType(models.Model):
 	type_name = models.CharField(max_length=55)
@@ -26,7 +26,7 @@ class PaymentType(models.Model):
 
 class BangOrder(models.Model):
 	status = models.CharField(max_length=55)
-	customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
+	user = models.ForeignKey(User, on_delete=models.CASCADE)
 	payment_type = models.ForeignKey(PaymentType, on_delete=models.CASCADE)
 
 class OrderHasProducts(models.Model):
