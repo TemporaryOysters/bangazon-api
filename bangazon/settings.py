@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'quickstart.apps.QuickstartConfig',
-    'bangazon',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [

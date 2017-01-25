@@ -1,14 +1,5 @@
 from django.db import models
-
-# Create your models here.
-class User(models.Model):
-	first_name = models.CharField(max_length=55)
-	last_name = models.CharField(max_length=55)
-	street_address = models.CharField(max_length=55)
-	city = models.CharField(max_length=55)
-	state_province = models.CharField(max_length=15)
-	country = models.CharField(max_length=55)
-	sign_up_date = models.DateField('sign up date')
+from django.contrib.auth.models import User
 
 class ProductType(models.Model):
 	name = models.CharField(max_length=55)
@@ -30,7 +21,5 @@ class BangOrder(models.Model):
 	payment_type = models.ForeignKey(PaymentType, on_delete=models.CASCADE)
 
 class OrderHasProducts(models.Model):
-	orderId = models.ManyToManyField(BangOrder)
-	productId = models.ManyToManyField(Product)
-
-
+	order = models.ForeignKey(BangOrder, default=1, null=True)
+	product = models.ForeignKey(Product, default=1, null=True)
