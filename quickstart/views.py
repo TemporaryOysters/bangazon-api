@@ -1,8 +1,8 @@
 from django.contrib.auth.models import User, Group
 from rest_framework import viewsets, generics
 from quickstart.models import User, ProductType, Product, PaymentType, BangOrder, OrderHasProducts
-from quickstart.serializers import UserSerializer, PaymentTypeSerializer, GroupSerializer
-from quickstart.productSerializer import ProductSerializer
+from quickstart.serializers import UserSerializer, PaymentTypeSerializer, GroupSerializer, ProductSerializer
+
 
 class UserViewSet(viewsets.ModelViewSet):
     """
