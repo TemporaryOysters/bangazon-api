@@ -22,6 +22,11 @@ class PaymentTypeSerializer(serializers.HyperlinkedModelSerializer):
         model = PaymentType
         fields = ('type_name', 'account_number',)
 
+class ProductSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Product
+        fields = ('name', 'description', 'price', 'product_type', 'user')
+
 
 
 
