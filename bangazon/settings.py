@@ -76,6 +76,10 @@ TEMPLATES = [
     },
 ]
 
+FIXTURE_DIRS = (
+    '/quickstart/fixtures',
+)
+
 WSGI_APPLICATION = 'bangazon.wsgi.application'
 
 

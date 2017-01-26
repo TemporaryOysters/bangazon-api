@@ -11,6 +11,9 @@ class Product(models.Model):
 	product_type = models.ForeignKey(ProductType, on_delete=models.CASCADE)
 	user = models.ForeignKey(User, on_delete=models.CASCADE)
 
+	def __str__(self):
+		return 'You can purchase this %s, described: %s. The price is $%s' % (self.name, self.description, self.price)
+
 class PaymentType(models.Model):
 	type_name = models.CharField(max_length=55)
 	account_number = models.IntegerField()
