@@ -32,8 +32,10 @@ class ProductSerializer(serializers.HyperlinkedModelSerializer):
         model = Product
         fields = ('name', 'description', 'price', 'product_type', 'user')
 
-
-
+class OrderHasProductsSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = OrderHasProducts
+        fields = ('order', 'product')
 
 
 
