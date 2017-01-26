@@ -1,0 +1,68 @@
+[
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$30000$Six8xBONnMPU$Xm+\/9Dc1TfKS3hslvKrfMos\/PQaZ8puxPyPlzqnaMcE=",
+      "last_login": "2017-01-26T15:28:36.162Z",
+      "is_superuser": true,
+      "username": "oyster",
+      "first_name": "",
+      "last_name": "",
+      "email": "oyster@oyster.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2017-01-23T21:57:57.377Z",
+      "groups": [
+        
+      ],
+      "user_permissions": [
+        
+      ]
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+      "password": "!IxmnFzI6sTwV2NSDNQXKIYGS9WUr6iD4ecNWFStC",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "bob",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2017-01-25T17:17:43.774Z",
+      "groups": [
+        
+      ],
+      "user_permissions": [
+        
+      ]
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+      "password": "!BmoOJTLw1RNOBqPcDRKuAGvWY14fF5bHkn86TpUY",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "bo",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2017-01-25T20:36:02.337Z",
+      "groups": [
+        
+      ],
+      "user_permissions": [
+        
+      ]
+    }
+  }
+]
