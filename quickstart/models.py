@@ -26,3 +26,12 @@ class BangOrder(models.Model):
 class OrderHasProducts(models.Model):
 	order = models.ForeignKey(BangOrder, default=1, null=True)
 	product = models.ForeignKey(Product, default=1, null=True)
+
+# This class extends the User class to include necessary fields
+class Customer(models.Model):
+	user = models.OneToOneField(User, on_delete=models.CASCADE)
+	address = models.CharField(max_length=240)
+	city = models.CharField(max_length=55)
+	state_province = models.CharField(max_length=55)
+	country = models.CharField(max_length=55)
+	payment_type = models.ForeignKey(PaymentType, on_delete=models.CASCADE)
