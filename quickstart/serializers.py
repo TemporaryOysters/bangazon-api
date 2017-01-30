@@ -58,7 +58,7 @@ class PaymentTypeSerializer(serializers.HyperlinkedModelSerializer):
     to :models:`quickstart.PaymentType`
     author: Richie Van Sickle
     """
-        class Meta:
+    class Meta:
         model = PaymentType
         fields = ('type_name', 'account_number',)
 
@@ -68,7 +68,7 @@ class ProductSerializer(serializers.HyperlinkedModelSerializer):
     to :model:`quickstart.Product`
     author: Richie Van Sickle
     """
-        class Meta:
+    class Meta:
         model = Product
         fields = ('name', 'description', 'price', 'product_type', 'user')
 
