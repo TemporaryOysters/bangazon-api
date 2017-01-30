@@ -17,6 +17,7 @@ class UserViewSet(viewsets.ModelViewSet):
 class CustomerViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows users to be viewed or edited.
+    author: Mark Ellis
     """
     queryset = Customer.objects.all()
     serializer_class = CustomerSerializer
@@ -41,6 +42,7 @@ class ProductViewSet(viewsets.ModelViewSet):
 class BangOrderViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows products to be viewed or edited.
+    author: Richie VanSickle
     """
     queryset = BangOrder.objects.all()
     serializer_class = BangOrderSerializer
@@ -48,6 +50,7 @@ class BangOrderViewSet(viewsets.ModelViewSet):
 class OrderHasProductsViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows products to be viewed or edited.
+    author: Ali Kimbrell
     """
     queryset = OrderHasProducts.objects.all()
     serializer_class = OrderHasProductsSerializer
@@ -55,6 +58,7 @@ class OrderHasProductsViewSet(viewsets.ModelViewSet):
 class PaymentTypeViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows products to be viewed or edited.
+    author: Whitney Cormack
     """
     queryset = PaymentType.objects.all()
     serializer_class = PaymentTypeSerializer
@@ -62,6 +66,7 @@ class PaymentTypeViewSet(viewsets.ModelViewSet):
 class ProductTypeViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows products to be viewed or edited.
+    author: Trent Hand
     """
     queryset = ProductType.objects.all()
     serializer_class = ProductTypeSerializer
