@@ -12,7 +12,7 @@ Bangazon, LLC provides a Django REST API to track customers, products, product t
 ## Installation
 
 1. Clone the project into a local folder - `git clone git@github.com:TemporaryOysters/bangazon-api.git`
-2. Navigate into the newly created directory - `cd bangazon-api/bangazon`
+2. Navigate into the newly created directory - `cd bangazon-api`
 3. Make migrations to build the database - `python manage.py makemigrations`
 4. Run `python manage.py migrate`
 5. Start the server - `python manage.py runserver`
