@@ -21,8 +21,7 @@ class Product(models.Model):
 	user = models.ForeignKey(User, on_delete=models.CASCADE)
 
 	def __str__(self):
-		return 'You can purchase this %s, described: %s. The price is $%s' %
-		(self.name, self.description, self.price)
+		return 'You can purchase this %s, described: %s. The price is $%s' % (self.name, self.description, self.price)
 
 class PaymentType(models.Model):
 	"""
