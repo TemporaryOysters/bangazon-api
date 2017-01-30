@@ -1,7 +1,9 @@
 from django.contrib.auth.models import User, Group
 from rest_framework import viewsets, generics
 from quickstart.models import User, ProductType, Product, PaymentType, BangOrder, OrderHasProducts, Customer
-from quickstart.serializers import UserSerializer, PaymentTypeSerializer, GroupSerializer, ProductSerializer, BangOrderSerializer, OrderHasProductsSerializer, CustomerSerializer
+from quickstart.serializers import UserSerializer, PaymentTypeSerializer, GroupSerializer, ProductSerializer, BangOrderSerializer, OrderHasProductsSerializer, ProductTypeSerializer, CustomerSerializer
+
+
 
 
 class UserViewSet(viewsets.ModelViewSet):
@@ -54,7 +56,12 @@ class PaymentTypeViewSet(viewsets.ModelViewSet):
     queryset = PaymentType.objects.all()
     serializer_class = PaymentTypeSerializer
 
-
+class ProductTypeViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows products to be viewed or edited.
+    """
+    queryset = ProductType.objects.all()
+    serializer_class = ProductTypeSerializer
 
 
 
