@@ -31,6 +31,9 @@ class PaymentType(models.Model):
 	type_name = models.CharField(max_length=55)
 	account_number = models.IntegerField()
 
+	def __str__(self):
+		return '%s' % (self.type_name)
+
 class BangOrder(models.Model):
 	"""
 	Stores a single BangOrder, related to model:`auth.User` and
