@@ -8,7 +8,7 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('quickstart', '0002_auto_20170124_1814'),
+        ('bangapi', '0002_auto_20170124_1814'),
     ]
 
     operations = [

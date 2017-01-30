@@ -10,7 +10,7 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('quickstart', '0003_auto_20170124_1929'),
+        ('bangapi', '0003_auto_20170124_1929'),
     ]
 
     operations = [

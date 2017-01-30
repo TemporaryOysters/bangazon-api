@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'quickstart.apps.QuickstartConfig',
+    'bangapi.apps.QuickstartConfig',
     'rest_framework',
 ]
 
@@ -77,7 +77,7 @@ TEMPLATES = [
 ]
 
 FIXTURE_DIRS = (
-    '/quickstart/fixtures',
+    '/bangapi/fixtures',
 )
 
 WSGI_APPLICATION = 'bangazon.wsgi.application'
