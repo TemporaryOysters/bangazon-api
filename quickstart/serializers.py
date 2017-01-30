@@ -1,11 +1,16 @@
 from django.contrib.auth.models import User, Group
 from rest_framework import serializers
-from quickstart.models import ProductType, Product, PaymentType, BangOrder, OrderHasProducts
+from quickstart.models import ProductType, Product, PaymentType, BangOrder, OrderHasProducts, Customer
+
+class CustomerSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Customer
+        fields = ('url', 'user', 'address', 'city', 'state_province', 'country', 'payment_type',  )
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = User
-        fields = ('username', 'first_name', 'last_name', 'email', 'date_joined', 'groups')
+        fields = ('url', 'id', 'username', 'first_name', 'last_name', 'email', 'date_joined', 'groups', )
 
 class GroupSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
