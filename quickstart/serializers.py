@@ -1,39 +1,70 @@
 from django.contrib.auth.models import User, Group
 from rest_framework import serializers
-from quickstart.models import ProductType, Product, PaymentType, BangOrder, OrderHasProducts
+from quickstart.models import ProductType, Product, PaymentType, BangOrder, OrderHasProducts, Customer
+
+class CustomerSerializer(serializers.HyperlinkedModelSerializer):
+    """
+    This class defines the fields that get serialized/deserialized, related to the models.Customer model.
+    """
+    class Meta:
+        model = Customer
+        fields = ('url', 'user', 'address', 'city', 'state_province', 'country', 'payment_type',  )
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
+    """
+    This class defines the fields that get serialized/deserialized, related to the auth.models.User model.
+    """
     class Meta:
         model = User
         fields = ('username', 'first_name', 'last_name', 'email', 'date_joined', 'groups')
 
 class GroupSerializer(serializers.HyperlinkedModelSerializer):
+    """
+    This class defines the fields that get serialized/deserialized, related to the models.Group model.
+    """
     class Meta:
         model = Group
         fields = ('url', 'name')
 
 class BangOrderSerializer(serializers.HyperlinkedModelSerializer):
+    """
+    This class defines the fields that get serialized/deserialized, related to the models.BangOrder model.
+    """
     class Meta:
         model = BangOrder
         fields = ('status', 'user', 'payment_type')
 
 class ProductTypeSerializer(serializers.HyperlinkedModelSerializer):
+    """
+    This class defines the fields that get serialized/deserialized, related to the models.ProductType model.
+    """
     class Meta:
         model = ProductType
         fields = ('name',)
 
 class PaymentTypeSerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
+    """
+    This class defines the fields that get serialized/deserialized, related to the models.PaymentType model.
+    """
+        class Meta:
         model = PaymentType
         fields = ('type_name', 'account_number',)
 
 class ProductSerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
+    """
+    This class defines the fields that get serialized/deserialized, related to the models.Product model.
+    """
+        class Meta:
         model = Product
         fields = ('name', 'description', 'price', 'product_type', 'user')
 
-
-
+class OrderHasProductsSerializer(serializers.HyperlinkedModelSerializer):
+    """
+    This class defines the fields that get serialized/deserialized, related to the models.OrderHasProducts model.
+    """
+        class Meta:
+        model = OrderHasProducts
+        fields = ('order', 'product')
 
 
 
