@@ -53,8 +53,11 @@ class OrderHasProducts(models.Model):
 	order = models.ForeignKey(BangOrder, default=1, null=True)
 	product = models.ForeignKey(Product, default=1, null=True)
 
-# This class extends the User class to include necessary fields
 class Customer(models.Model):
+	"""
+	Extends :model:`auth.User`
+	author: Mark Ellis
+	"""
 	user = models.OneToOneField(User, on_delete=models.CASCADE)
 	address = models.CharField(max_length=240)
 	city = models.CharField(max_length=55)
