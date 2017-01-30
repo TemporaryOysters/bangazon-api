@@ -6,7 +6,8 @@ from quickstart.serializers import UserSerializer, PaymentTypeSerializer, GroupS
 
 class UserViewSet(viewsets.ModelViewSet):
     """
-    API endpoint that allows users to be viewed or edited.
+    A ViewSet for viewing and editing user instances.
+    author: Ali Kimbrell
     """
     queryset = User.objects.all().order_by('-date_joined')
     serializer_class = UserSerializer
@@ -14,14 +15,16 @@ class UserViewSet(viewsets.ModelViewSet):
 
 class GroupViewSet(viewsets.ModelViewSet):
     """
-    API endpoint that allows groups to be viewed or edited.
+    A ViewSet for viewing and editing group instances.
+    author: Whitney Cormack
     """
     queryset = Group.objects.all()
     serializer_class = GroupSerializer
 
 class ProductViewSet(viewsets.ModelViewSet):
 	"""
-	API endpoint that allows products to be viewed or edited.
+    A ViewSet for viewing and editing product instances.
+    author: Trent Hand
 	"""
 	queryset = Product.objects.all()
 	serializer_class = ProductSerializer

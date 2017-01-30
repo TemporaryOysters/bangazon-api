@@ -4,7 +4,7 @@ from quickstart.models import ProductType, Product, PaymentType, BangOrder, Orde
 
 class CustomerSerializer(serializers.HyperlinkedModelSerializer):
     """
-    This class defines the fields that get serialized/deserialized, related to the models.Customer model.
+    This class defines the fields that get serialized/deserialized, related to :model:`quickstart.Customer`
     author: Mark Ellis
     """
     class Meta:
@@ -13,7 +13,7 @@ class CustomerSerializer(serializers.HyperlinkedModelSerializer):
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     """
-    This class defines the fields that get serialized/deserialized, related to the auth.models.User model.
+    This class defines the fields that get serialized/deserialized, related to :model:`auth.User`
     author: Ali Kimbrell
     """
     class Meta:
@@ -22,7 +22,7 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
 
 class GroupSerializer(serializers.HyperlinkedModelSerializer):
     """
-    This class defines the fields that get serialized/deserialized, related to the models.Group model.
+    This class defines the fields that get serialized/deserialized, related to :models:`quickstart.Group`
     author: Richie Van Sickle
     """
     class Meta:
@@ -31,7 +31,7 @@ class GroupSerializer(serializers.HyperlinkedModelSerializer):
 
 class BangOrderSerializer(serializers.HyperlinkedModelSerializer):
     """
-    This class defines the fields that get serialized/deserialized, related to the models.BangOrder model.
+    This class defines the fields that get serialized/deserialized, related to :model:`quickstart.BangOrder`
     author: Richie Van Sickle
     """
     class Meta:
@@ -40,7 +40,7 @@ class BangOrderSerializer(serializers.HyperlinkedModelSerializer):
 
 class ProductTypeSerializer(serializers.HyperlinkedModelSerializer):
     """
-    This class defines the fields that get serialized/deserialized, related to the models.ProductType model.
+    This class defines the fields that get serialized/deserialized, related to :model:`quickstart.ProductType`
     author: Richie Van Sickle
     """
     class Meta:
@@ -49,7 +49,7 @@ class ProductTypeSerializer(serializers.HyperlinkedModelSerializer):
 
 class PaymentTypeSerializer(serializers.HyperlinkedModelSerializer):
     """
-    This class defines the fields that get serialized/deserialized, related to the models.PaymentType model.
+    This class defines the fields that get serialized/deserialized, related to :models:`quickstart.PaymentType`
     author: Richie Van Sickle
     """
         class Meta:
@@ -58,7 +58,7 @@ class PaymentTypeSerializer(serializers.HyperlinkedModelSerializer):
 
 class ProductSerializer(serializers.HyperlinkedModelSerializer):
     """
-    This class defines the fields that get serialized/deserialized, related to the models.Product model.
+    This class defines the fields that get serialized/deserialized, related to :model:`quickstart.Product`
     author: Richie Van Sickle
     """
         class Meta:
@@ -67,7 +67,7 @@ class ProductSerializer(serializers.HyperlinkedModelSerializer):
 
 class OrderHasProductsSerializer(serializers.HyperlinkedModelSerializer):
     """
-    This class defines the fields that get serialized/deserialized, related to the models.OrderHasProducts model.
+    This class defines the fields that get serialized/deserialized, related to :model:`quickstart.OrderHasProducts`
     author: Richie Van Sickle
     """
         class Meta:
