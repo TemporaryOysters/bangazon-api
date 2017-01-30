@@ -1,11 +1,11 @@
 from django.contrib.auth.models import User, Group
 from rest_framework import serializers
-from quickstart.models import ProductType, Product, PaymentType, BangOrder, OrderHasProducts, Customer
+from bangapi.models import ProductType, Product, PaymentType, BangOrder, OrderHasProducts, Customer
 
 class CustomerSerializer(serializers.HyperlinkedModelSerializer):
     """
     This class defines the fields that get serialized/deserialized, related
-    to :model:`quickstart.Customer`
+    to :model:`bangapi.Customer`
     author: Mark Ellis
     """
     class Meta:
@@ -25,7 +25,7 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
 class GroupSerializer(serializers.HyperlinkedModelSerializer):
     """
     This class defines the fields that get serialized/deserialized, related
-    to :models:`quickstart.Group`
+    to :models:`bangapi.Group`
     author: Richie Van Sickle
     """
     class Meta:
@@ -35,7 +35,7 @@ class GroupSerializer(serializers.HyperlinkedModelSerializer):
 class BangOrderSerializer(serializers.HyperlinkedModelSerializer):
     """
     This class defines the fields that get serialized/deserialized, related
-    to :model:`quickstart.BangOrder`
+    to :model:`bangapi.BangOrder`
     author: Richie Van Sickle
     """
     class Meta:
@@ -45,7 +45,7 @@ class BangOrderSerializer(serializers.HyperlinkedModelSerializer):
 class ProductTypeSerializer(serializers.HyperlinkedModelSerializer):
     """
     This class defines the fields that get serialized/deserialized, related
-    to :model:`quickstart.ProductType`
+    to :model:`bangapi.ProductType`
     author: Richie Van Sickle
     """
     class Meta:
@@ -55,27 +55,27 @@ class ProductTypeSerializer(serializers.HyperlinkedModelSerializer):
 class PaymentTypeSerializer(serializers.HyperlinkedModelSerializer):
     """
     This class defines the fields that get serialized/deserialized, related
-    to :models:`quickstart.PaymentType`
+    to :models:`bangapi.PaymentType`
     author: Richie Van Sickle
     """
-        class Meta:
+    class Meta:
         model = PaymentType
         fields = ('type_name', 'account_number',)
 
 class ProductSerializer(serializers.HyperlinkedModelSerializer):
     """
     This class defines the fields that get serialized/deserialized, related
-    to :model:`quickstart.Product`
+    to :model:`bangapi.Product`
     author: Richie Van Sickle
     """
-        class Meta:
+    class Meta:
         model = Product
         fields = ('name', 'description', 'price', 'product_type', 'user')
 
 class OrderHasProductsSerializer(serializers.HyperlinkedModelSerializer):
     """
     This class defines the fields that get serialized/deserialized, related
-    to :model:`quickstart.OrderHasProducts`
+    to :model:`bangapi.OrderHasProducts`
     author: Richie Van Sickle
     """
     class Meta:

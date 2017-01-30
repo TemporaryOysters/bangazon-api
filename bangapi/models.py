@@ -10,7 +10,7 @@ class ProductType(models.Model):
 
 class Product(models.Model):
 	"""
-	Stores a single Product, related to :model:`quickstart.ProductType` and
+	Stores a single Product, related to :model:`bangapi.ProductType` and
 	:model:`auth.User`.
 	author: Mark Ellis
 	"""
@@ -37,7 +37,7 @@ class PaymentType(models.Model):
 class BangOrder(models.Model):
 	"""
 	Stores a single BangOrder, related to model:`auth.User` and
-	:model:`quickstart.PaymentType`
+	:model:`bangapi.PaymentType`
 	author: Mark Ellis
 	"""
 	status = models.CharField(max_length=55)
@@ -47,11 +47,11 @@ class BangOrder(models.Model):
 class OrderHasProducts(models.Model):
 	"""
 	Stores a single instance of relationship between
-	:model:`quickstart.BangOrder` and :model:`quickstart.Product`
+	:model:`bangapi.BangOrder` and :model:`bangapi.Product`
 	author: Mark Ellis
 	"""
-	order = models.ForeignKey(BangOrder, default=1, null=True)
-	product = models.ForeignKey(Product, default=1, null=True)
+	order = models.ForeignKey(BangOrder, null=True)
+	product = models.ForeignKey(Product, null=True)
 
 class Customer(models.Model):
 	"""

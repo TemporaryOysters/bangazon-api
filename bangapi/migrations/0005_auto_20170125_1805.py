@@ -9,7 +9,7 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('quickstart', '0004_auto_20170125_1736'),
+        ('bangapi', '0004_auto_20170125_1736'),
     ]
 
     operations = [
@@ -24,11 +24,11 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='orderhasproducts',
             name='order',
-            field=models.ForeignKey(default=1, null=True, on_delete=django.db.models.deletion.CASCADE, to='quickstart.BangOrder'),
+            field=models.ForeignKey(default=1, null=True, on_delete=django.db.models.deletion.CASCADE, to='bangapi.BangOrder'),
         ),
         migrations.AddField(
             model_name='orderhasproducts',
             name='product',
-            field=models.ForeignKey(default=1, null=True, on_delete=django.db.models.deletion.CASCADE, to='quickstart.Product'),
+            field=models.ForeignKey(default=1, null=True, on_delete=django.db.models.deletion.CASCADE, to='bangapi.Product'),
         ),
     ]
