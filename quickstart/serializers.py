@@ -5,6 +5,7 @@ from quickstart.models import ProductType, Product, PaymentType, BangOrder, Orde
 class CustomerSerializer(serializers.HyperlinkedModelSerializer):
     """
     This class defines the fields that get serialized/deserialized, related to the models.Customer model.
+    author: Mark Ellis
     """
     class Meta:
         model = Customer
@@ -13,6 +14,7 @@ class CustomerSerializer(serializers.HyperlinkedModelSerializer):
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     """
     This class defines the fields that get serialized/deserialized, related to the auth.models.User model.
+    author: Ali Kimbrell
     """
     class Meta:
         model = User
@@ -21,6 +23,7 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
 class GroupSerializer(serializers.HyperlinkedModelSerializer):
     """
     This class defines the fields that get serialized/deserialized, related to the models.Group model.
+    author: Richie Van Sickle
     """
     class Meta:
         model = Group
@@ -29,6 +32,7 @@ class GroupSerializer(serializers.HyperlinkedModelSerializer):
 class BangOrderSerializer(serializers.HyperlinkedModelSerializer):
     """
     This class defines the fields that get serialized/deserialized, related to the models.BangOrder model.
+    author: Richie Van Sickle
     """
     class Meta:
         model = BangOrder
@@ -37,6 +41,7 @@ class BangOrderSerializer(serializers.HyperlinkedModelSerializer):
 class ProductTypeSerializer(serializers.HyperlinkedModelSerializer):
     """
     This class defines the fields that get serialized/deserialized, related to the models.ProductType model.
+    author: Richie Van Sickle
     """
     class Meta:
         model = ProductType
@@ -45,6 +50,7 @@ class ProductTypeSerializer(serializers.HyperlinkedModelSerializer):
 class PaymentTypeSerializer(serializers.HyperlinkedModelSerializer):
     """
     This class defines the fields that get serialized/deserialized, related to the models.PaymentType model.
+    author: Richie Van Sickle
     """
         class Meta:
         model = PaymentType
@@ -53,6 +59,7 @@ class PaymentTypeSerializer(serializers.HyperlinkedModelSerializer):
 class ProductSerializer(serializers.HyperlinkedModelSerializer):
     """
     This class defines the fields that get serialized/deserialized, related to the models.Product model.
+    author: Richie Van Sickle
     """
         class Meta:
         model = Product
@@ -61,6 +68,7 @@ class ProductSerializer(serializers.HyperlinkedModelSerializer):
 class OrderHasProductsSerializer(serializers.HyperlinkedModelSerializer):
     """
     This class defines the fields that get serialized/deserialized, related to the models.OrderHasProducts model.
+    author: Richie Van Sickle
     """
         class Meta:
         model = OrderHasProducts
