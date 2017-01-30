@@ -15,6 +15,7 @@ Bangazon, LLC provides a Django REST API to track customers, products, product t
 2. Navigate into the newly created directory - `cd bangazon-api`
 3. Make migrations to build the database - `python manage.py makemigrations`
 4. Run `python manage.py migrate`
+5. Create a superuser - `python manage.py createsuperuser` and complete the prompted fields with your information
 5. Start the server - `python manage.py runserver`
 6. Set browser to http://127.0.0.1:8000 to view the API resources
 
