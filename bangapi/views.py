@@ -2,7 +2,7 @@ from django.contrib.auth.models import User, Group
 from rest_framework import viewsets, generics
 from bangapi.models import User, ProductType, Product, PaymentType, BangOrder, OrderHasProducts, Customer
 from bangapi.serializers import UserSerializer, PaymentTypeSerializer, GroupSerializer, ProductSerializer, BangOrderSerializer, OrderHasProductsSerializer, ProductTypeSerializer, CustomerSerializer, ClientSerializer
-
+from rest_framework import permissions
 
 
 
@@ -28,6 +28,8 @@ class CustomerViewSet(viewsets.ModelViewSet):
     """
     queryset = Customer.objects.all()
     serializer_class = CustomerSerializer
+    permission_classes = (permissions.IsAdminUser,)
+
 
 
 class GroupViewSet(viewsets.ModelViewSet):
@@ -39,12 +41,12 @@ class GroupViewSet(viewsets.ModelViewSet):
     serializer_class = GroupSerializer
 
 class ProductViewSet(viewsets.ModelViewSet):
-	"""
+    """
     A ViewSet for viewing and editing product instances.
     author: Trent Hand
-	"""
-	queryset = Product.objects.all()
-	serializer_class = ProductSerializer
+    """
+    queryset = Product.objects.all()
+    serializer_class = ProductSerializer
 
 class BangOrderViewSet(viewsets.ModelViewSet):
     """
