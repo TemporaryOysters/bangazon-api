@@ -1,7 +1,7 @@
 from django.contrib.auth.models import User, Group
 from rest_framework import viewsets, generics
 from bangapi.models import User, ProductType, Product, PaymentType, BangOrder, OrderHasProducts, Customer
-from bangapi.serializers import UserSerializer, PaymentTypeSerializer, GroupSerializer, ProductSerializer, BangOrderSerializer, OrderHasProductsSerializer, ProductTypeSerializer, CustomerSerializer
+from bangapi.serializers import UserSerializer, PaymentTypeSerializer, GroupSerializer, ProductSerializer, BangOrderSerializer, OrderHasProductsSerializer, ProductTypeSerializer, CustomerSerializer, ClientSerializer
 
 
 
@@ -12,7 +12,14 @@ class UserViewSet(viewsets.ModelViewSet):
     author: Ali Kimbrell
     """
     queryset = User.objects.all().order_by('-date_joined')
-    serializer_class = UserSerializer
+
+    def get_serializer_class(self):
+        if self.request.user.is_superuser:
+            serializer_class = UserSerializer
+            return serializer_class
+        else:
+            serializer_class = ClientSerializer
+            return serializer_class
 
 class CustomerViewSet(viewsets.ModelViewSet):
     """

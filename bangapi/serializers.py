@@ -22,6 +22,16 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
         model = User
         fields = ('url', 'id', 'username', 'first_name', 'last_name', 'email', 'date_joined', 'groups', )
 
+class ClientSerializer(serializers.HyperlinkedModelSerializer):
+    """
+    This class defines the fields that get serialized/deserialized, related
+    to :model:`auth.User`
+    author: Ali Kimbrell
+    """
+    class Meta:
+        model = User
+        fields = ('id', 'first_name', 'last_name', )
+
 class GroupSerializer(serializers.HyperlinkedModelSerializer):
     """
     This class defines the fields that get serialized/deserialized, related
