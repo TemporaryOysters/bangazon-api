@@ -12,11 +12,14 @@ router.register(r'products_in_order', views.OrderHasProductsViewSet)
 router.register(r'payment_type', views.PaymentTypeViewSet)
 router.register(r'product_type', views.ProductTypeViewSet)
 router.register(r'customer', views.CustomerViewSet)
+# router.register(r'loginview', views.LoginView)
+
 
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include(router.urls)),
+    url(r'^login$', views.LoginView.as_view()),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]

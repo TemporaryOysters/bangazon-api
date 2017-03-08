@@ -22,6 +22,11 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
         model = User
         fields = ('url', 'id', 'username', 'first_name', 'last_name', 'email', 'date_joined', 'groups', )
 
+class LoginSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = UserSerializer
+        fields = ('email', 'password',)
+
 class GroupSerializer(serializers.HyperlinkedModelSerializer):
     """
     This class defines the fields that get serialized/deserialized, related

@@ -54,14 +54,17 @@ class OrderHasProducts(models.Model):
 	product = models.ForeignKey(Product, null=True)
 
 class Customer(models.Model):
-	"""
-	Extends :model:`auth.User`
-	author: Mark Ellis
-	"""
-	user = models.OneToOneField(User, on_delete=models.CASCADE)
-	address = models.CharField(max_length=240)
-	city = models.CharField(max_length=55)
-	state_province = models.CharField(max_length=55)
-	country = models.CharField(max_length=55)
-	payment_type = models.ForeignKey(PaymentType, on_delete=models.CASCADE)
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    created = models.DateTimeField(auto_now_add=True)
+    first_name = models.CharField(max_length=100)
+    last_name = models.CharField(max_length=100)
+    street_address = models.CharField(max_length=100)
+    city = models.CharField(max_length=25)
+    state = models.CharField(max_length=2)
+    zipcode = models.CharField(max_length=10)
 
+    def __str__(self):
+        return "{} {}".format(self.first_name, self.last_name)
+
+    class Meta:
+        ordering = ('created',)
